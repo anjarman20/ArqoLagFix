@@ -1,0 +1,17 @@
+# Entity Management
+whitelist:
+  - ARMOR_STAND
+  - ITEM_FRAME
+  - PAINTING
+  - PROJECTILE
+mob-types:
+  aggressive:
+    - ZOMBIE
+    - SKELETON
+    - CREEPER
+  passive:
+    - COW
+    - PIG
+    - SHEEP
+    - CHICKEN
+merge-radius: 4  # Blocks

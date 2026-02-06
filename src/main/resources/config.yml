@@ -1,0 +1,71 @@
+# ========================================
+# ARQOLAGFIX MAIN CONFIG
+# Hot reload dengan /arqolagfix reload
+# ========================================
+
+max-entities-chunk-default: 50
+hopper-throttle-default: 3
+emergency-ram-threshold: 8.0  # GB
+
+# AutoClearLag System
+clearlag:
+  enabled: true
+  interval: 300  # seconds (5 minutes)
+  warning-time: 60  # warn 60 seconds before clear
+  
+  # Entity types to clear
+  clear-types:
+    - DROPPED_ITEM                # All items on ground
+    - ARROW                       # Arrows
+    - TRIDENT                     # Tridents
+    - EXPERIENCE_ORB              # Experience orbs
+    - HOSTILE_MOBS_NO_NAMETAG     # Hostile mobs WITHOUT custom names
+    # - ANIMALS                   # Animals (cows, pigs, sheep)
+    # - PROJECTILE                # All projectiles
+  
+  # Worlds to skip clearlag
+  skip-worlds: []
+
+# Explosion Optimizer
+explosion:
+  # Limit explosion radius
+  limit-radius: true
+  max-radius: 8.0
+  
+  # Prevent chain reactions
+  prevent-chains: true
+  max-per-area: 3
+  chain-radius: 10
+  chain-window-ms: 500
+  
+  # Limit block destruction
+  limit-blocks: true
+  
+  # Reduce explosion damage (optional)
+  reduce-damage: false
+  
+  # Logging (disable spam)
+  verbose-logging: false  # Set true for debugging only
+  
+  # Entity-specific caps
+  tnt-max-radius: 4.0
+  creeper-max-radius: 5.0
+  end-crystal-max-radius: 5.0
+
+# Performance Optimization Settings
+optimization:
+  # Async thread pool size (1-8)
+  thread-pool-size: 4
+  
+  # Entity optimizer - chunks per tick
+  entity-chunks-per-tick: 5
+  
+  # Performance monitor update intervals (ticks)
+  monitor-async-interval: 40    # 2 seconds
+  monitor-sync-interval: 60     # 3 seconds
+  
+  # CPU update cache (ms)
+  cpu-cache-duration: 5000      # 5 seconds
+  
+  # Auto-clear countdown check interval (ticks)
+  clearlag-check-interval: 40   # 2 seconds
